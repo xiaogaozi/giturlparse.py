@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
 try:
-    from setuptools import setup, Extension
+    from setuptools import setup
     has_setuptools = True
 except ImportError:
-    from distutils.core import setup, Extension
+    from distutils.core import setup
     has_setuptools = False
 
-version_string = '0.0.5'
+version_string = '0.0.6'
 
 
 setup_kwargs = {}
@@ -22,17 +22,16 @@ dependency_links = [
 ]
 
 setup(name='giturlparse.py',
-    description='A Git URL parsing module (supports parsing and rewriting)',
-    keywords='git url parse ssh github bitbucket',
-    version=version_string,
-    url='https://github.com/FriendCode/giturlparse.py',
-    license='Apache v2',
-    author="Aaron O'Mullan",
-    author_email='aaron@friendco.de',
-    long_description="""
-    """,
-    packages=['giturlparse', 'giturlparse.platforms'],
-    install_requires=install_requires,
-    dependency_links=dependency_links,
-    **setup_kwargs
-)
+      description='A Git URL parsing module (supports parsing and rewriting)',
+      keywords='git url parse ssh github bitbucket',
+      version=version_string,
+      url='https://github.com/FriendCode/giturlparse.py',
+      license='Apache v2',
+      author="Aaron O'Mullan",
+      author_email='aaron@friendco.de',
+      long_description="""
+      """,
+      packages=['giturlparse', 'giturlparse.platforms'],
+      install_requires=install_requires,
+      dependency_links=dependency_links,
+      **setup_kwargs)
